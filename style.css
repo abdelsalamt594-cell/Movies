@@ -1,0 +1,37 @@
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.tp img {
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.tp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.container {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  color: white;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.496);
+  position: absolute;
+  top: 400px;
+  transition: all 0.4s ease-in;
+  border-radius: 20px;
+  padding-left: 5px;
+}
+.container:hover .overlay {
+  top: 0;
+}
