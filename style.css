@@ -13,8 +13,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin-top: 90px;
 }
-.container {
+.container-overlay {
   width: 300px;
   height: 400px;
   position: relative;
@@ -32,6 +33,6 @@ body {
   border-radius: 20px;
   padding-left: 5px;
 }
-.container:hover .overlay {
+.container-overlay:hover .overlay {
   top: 0;
 }
