@@ -15,9 +15,10 @@ let sendOBJ = {
   navLink2: "https://api.themoviedb.org/3/trending/movie/day?language=en-US",
   navLink3: "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
   navLink4: "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
+  navLink5: "https://api.themoviedb.org/3/trending/tv/day?language=en-US",
 };
 
-async function Moive(send) {
+async function Movie(send) {
   tp.innerHTML = `
   <h3>Loading ......</h3>
   <div class="spinner-border" role="status">
@@ -37,6 +38,7 @@ async function Moive(send) {
       <div class="overlay">
       <h1>${movie.title}</h1>
       <p>${movie.overview}</p>
+      <a href ="details.html?id=${movie.id}"class="btn btn-outline-danger">Show me more</a>
       </div>
     </div>
     `;
@@ -47,18 +49,23 @@ let navlink1 = document.getElementById("nav-link1");
 let navlink2 = document.getElementById("nav-link2");
 let navlink3 = document.getElementById("nav-link3");
 let navlink4 = document.getElementById("nav-link4");
+let navlink5 = document.getElementById("nav-link5");
 navlink1.addEventListener("click", function () {
-  Moive(sendOBJ.navLink1);
+  Movie(sendOBJ.navLink1);
 });
 
 navlink2.addEventListener("click", function () {
-  Moive(sendOBJ.navLink2);
+  Movie(sendOBJ.navLink2);
 });
 
 navlink3.addEventListener("click", function () {
-  Moive(sendOBJ.navLink3);
+  Movie(sendOBJ.navLink3);
 });
 
 navlink4.addEventListener("click", function () {
-  Moive(sendOBJ.navLink4);
+  Movie(sendOBJ.navLink4);
+});
+
+navlink5.addEventListener("click", function () {
+  Movie(sendOBJ.navLink5);
 });

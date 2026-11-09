@@ -36,3 +36,17 @@ body {
 .container-overlay:hover .overlay {
   top: 0;
 }
+
+.movie-details {
+  margin-top: 70px;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.col-md-6 {
+  color: white;
+}
